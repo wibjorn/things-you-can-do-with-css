@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blend images and text</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Literata:opsz,wght@7..72,600&family=Rubik+Doodle+Triangles&family=Texturina:opsz@12..72&display=swap");
+    :root {
+      --texturina: "Texturina", serif;
+      --literata: "Literata", serif;
+      --cinzel: "Cinzel", serif;
+    }
+    body {
+      font-family: "Segoe UI";
+      font-size: 88px;
+      display: grid;
+      min-height: 90vh;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0;
+      max-width: clamp(80%, 80vw, 100%);
+      line-height: 1.25;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    :root {
+      --radius-one: 0 0 0 0;
+      --radius-two: 90% 100% 50% 17%;
+      --radius-three: 50% 30% 65% 90%;
+      --radius-four: 40% 65% 80% 70%;
+      --radius-five: 70% 50% 40% 50%;
+    }
+
+    .microsoft {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row: 1fr 1fr;
+      height: 448px;
+      width: 448px;
+      gap: 24px;
+    }
+    #red {
+      background-color: #f35325;
+    }
+    #green {
+      background-color: #81bc06;
+      --radius-one: 0 0 0 0;
+      --radius-two: 50% 30% 65% 90%;
+      --radius-three: 70% 50% 40% 50%;
+      --radius-four: 20% 30% 70% 80%;
+      --radius-five: 90% 100% 50% 17%;
+    }
+    #blue {
+      background-color: #05a6f0;
+      --radius-one: 0 0 0 0;
+      --radius-two: 40% 65% 80% 70%;
+      --radius-three: 50% 30% 65% 90%;
+      --radius-four: 20% 30% 70% 80%;
+      --radius-five: 70% 50% 40% 50%;
+    }
+    #yellow {
+      background-color: #ffba08;
+    }
+
+    .microsoft:not(:hover) .square {
+      animation: groovy 10s infinite linear alternate;
+    }
+
+    @keyframes groovy {
+      0% {
+        border-radius: var(--radius-one);
+      }
+
+      10% {
+        border-radius: var(--radius-one);
+      }
+
+      25% {
+        border-radius: var(--radius-two);
+      }
+
+      50% {
+        border-radius: var(--radius-three);
+      }
+
+      75% {
+        border-radius: var(--radius-four);
+      }
+
+      100% {
+        border-radius: var(--radius-five);
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Groovysoft</h1>
+      <div class="microsoft">
+        <div id="red" class="square"></div>
+        <div id="green" class="square"></div>
+        <div id="blue" class="square"></div>
+        <div id="yellow" class="square"></div>
+      </div>
+    </div>
+  </body>
+</html>

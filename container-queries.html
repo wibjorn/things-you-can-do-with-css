@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blend images and text</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Literata:opsz,wght@7..72,600&family=Rubik+Doodle+Triangles&family=Texturina:opsz@12..72&display=swap");
+    :root {
+      --texturina: "Texturina", serif;
+      --literata: "Literata", serif;
+      --cinzel: "Cinzel", serif;
+    }
+    body {
+      font-family: var(--texturina);
+      font-size: 44px;
+      /* background: black; */
+      text-align: center;
+      min-height: 90vh;
+      place-items: center;
+    }
+
+    h1 {
+      color: black;
+      text-wrap: balance;
+    }
+
+    .resize {
+      resize: horizontal; /* ⭐ Yeah! You can do that too with just CSS. But sadly overflow must be hidden */
+      overflow: hidden;
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .cq-parent {
+      container: the-name / inline-size;
+      gap: 5px;
+      width: 100%;
+    }
+
+    .dot {
+      display: inline-block;
+      text-align: center;
+      line-height: 1;
+      border-radius: 50%;
+
+      padding: 1.5em;
+      height: 1.2em;
+      width: 1.2em;
+      font-size: 8px;
+
+      color: white;
+      background-color: blue;
+      color: white;
+      border: 1px double blue;
+      transition: all 1s ease-in;
+      transform: rotate(315deg);
+    }
+
+    @container the-name (min-width: 350px) {
+      .dot {
+        font-size: 16px;
+        background-color: green;
+        color: white;
+        border: 1px double green;
+        transform: rotate(-315deg);
+      }
+    }
+
+    @container the-name (min-width: 550px) {
+      .dot {
+        font-size: 32px;
+        background-color: red;
+        color: white;
+        border: 1px double red;
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+  <body>
+    <h1>Container queries</h1>
+    <div class="resize">
+      <div class="cq-parent">
+        <p class="dot">1</p>
+        <p class="dot">2</p>
+        <p class="dot">3</p>
+        <p class="dot">4</p>
+        <p class="dot">5</p>
+        <p class="dot">6</p>
+        <p class="dot">7</p>
+        <p class="dot">8</p>
+        <p class="dot">9</p>
+        <p class="dot">10</p>
+      </div>
+    </div>
+  </body>
+</html>

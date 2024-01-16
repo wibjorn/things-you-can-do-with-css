@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blend images and text</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@microsoft/atlas-css/dist/index.css"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Literata:opsz,wght@7..72,600&family=Rubik+Doodle+Triangles&family=Texturina:opsz@12..72&display=swap");
+    :root {
+      --texturina: "Texturina", serif;
+      --literata: "Literata", serif;
+      --cinzel: "Cinzel", serif;
+    }
+    body {
+      font-family: var(--texturina);
+      font-size: 32px;
+      min-height: 100vh;
+      padding: 48px;
+    }
+    #container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 48px;
+      column-gap: 48px;
+      place-items: center;
+    }
+
+    .list-anchor {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4/ 3;
+      display: block;
+      overflow: hidden;
+      border-radius: 32px;
+      position: relative;
+    }
+
+    .list-anchor:after {
+      content: "Visit";
+      text-transform: uppercase;
+      position: absolute;
+      background-color: black;
+      font-size: 48px;
+      text-align: right;
+      top: 24px;
+      right: 24px;
+      color: white;
+      padding: 8px;
+      border-radius: 8px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4/ 3;
+    }
+  </style>
+  <body>
+    <h1>Things you can do with CSS</h1>
+    <div id="container">
+      <a
+        aria-label="animated background gradients with animated inverted text"
+        href="./image-gradient.html"
+        class="list-anchor"
+      >
+        <iframe
+          src="./image-gradient.html"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </a>
+      <a href="./headline_images.html" class="list-anchor">
+        <iframe
+          src="./headline_images.html"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </a>
+      <a href="./logo-animation.html" class="list-anchor">
+        <iframe
+          src="./logo-animation.html"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </a>
+      <a href="./themes_subthemes.html" class="list-anchor">
+        <iframe
+          src="./themes_subthemes.html"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+        <a href="./container-queries.html" class="list-anchor">
+          <iframe
+            src="./container-queries.html"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+      </a>
+
+    </div>
+  </body>
+</html>

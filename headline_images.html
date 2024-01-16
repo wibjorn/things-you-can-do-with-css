@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blend images and text</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Literata:opsz,wght@7..72,600&family=Rubik+Doodle+Triangles&family=Texturina:opsz@12..72&display=swap");
+    :root {
+      --texturina: "Texturina", serif;
+      --literata: "Literata", serif;
+      --cinzel: "Cinzel", serif;
+    }
+    body {
+      font-family: var(--cinzel);
+      font-size: 88px;
+      /* background: black; */
+      display: grid;
+      min-height: 90vh;
+      place-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      text-wrap: wrap;
+      white-space: wrap;
+      margin: 0;
+      max-width: clamp(80%, 80vw, 100%);
+      background-position: center;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: url("cray-cray.jpg");
+      background: url("mountains.png");
+      background-attachment: fixed;
+      background-size: cover;
+      background-clip: text;
+      background-repeat: no-repeat;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <h1>Make the headline yours</h1>
+  </body>
+</html>

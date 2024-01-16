@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-synthwave background-color-body">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Themes and subthemes</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@microsoft/atlas-css/dist/index.css"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Literata:opsz,wght@7..72,600&family=Rubik+Doodle+Triangles&family=Texturina:opsz@12..72&display=swap");
+    .theme-synthwave {
+      --texturina: "Texturina", serif;
+      --literata: "Literata", serif;
+      --cinzel: "Cinzel", serif;
+      --rubik: "Rubik Doodle Triangles", sans-serif;
+
+      --theme-border: #ff7edb99;
+      --theme-text: #f97e72;
+      --theme-text-subtle: #ff7edb;
+      --theme-text-invert: #000;
+      --theme-body-background: #262335;
+      --theme-alternate-background-medium: #f97e72;
+      --theme-alternate-background: #fa9389;
+
+      --theme-primary-base: #a897c3;
+      --theme-primary-background: #4b3c68;
+      --theme-primary-background-glow-high-contrast: #4b3c68;
+      --theme-primary-dark: #c8beda;
+      --theme-primary-hover: #917db5;
+      --theme-primary-active: #9d8abc;
+      --theme-primary-invert: #000;
+
+      --theme-secondary-background: #262335;
+    }
+
+    .theme-xbox {
+      --theme-border: rgb(25, 123, 26);
+      --theme-text: #3a3a3a;
+      --theme-text-subtle: #474747;
+      --theme-text-invert: #white;
+      --theme-body-background: white;
+      --theme-alternate-background-medium: rgb(225, 224, 224);
+      --theme-alternate-background: #3a3a3a;
+
+      --theme-primary-base: rgb(25, 123, 26);
+      --theme-primary-background: white;
+      --theme-primary-background-glow-high-contrast: rgb(25, 123, 26);
+      --theme-primary-dark: rgb(15, 78, 16);
+      --theme-primary-hover: rgb(25, 123, 26);
+      --theme-primary-active: rgb(25, 123, 26);
+      --theme-primary-invert: white;
+    }
+
+    body {
+      display: grid;
+      min-height: 90vh;
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: 36px;
+      font-family: var(--rubik);
+    }
+  </style>
+  <body>
+    <div class="width-400 margin-inline-auto padding-lg">
+      <h1 class="color-text">Themes and subthemes</h1>
+      <div class="margin-top-md">
+        <button class="button">Standard</button>
+        <button class="button button-primary">Primary</button>
+      </div>
+      <div class="margin-top-md">
+        <button class="button button-filled">Standard</button>
+        <button class="button button-filled button-primary">Primary</button>
+      </div>
+
+      <div class="notification margin-top-lg">
+        <div class="notification-content">
+          <p>
+            A notification about something happening in the world
+            <a href="#">Link</a>
+          </p>
+        </div>
+      </div>
+      <div class="notification notification-primary margin-top-lg">
+        <div class="notification-content">
+          <p>
+            A notification about something happening in the world
+            <a href="#">Link</a>
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="theme-xbox background-color-body margin-top-sm border-radius-lg"
+      >
+        <div class="padding-md border-radius-lg background-color-body">
+          <img
+            class="width-100"
+            src="https://news.xbox.com/en-us/wp-content/themes/xbox-source/assets/images/logo-xbox-170x51.png"
+            alt=""
+          />
+          <h2
+            class="border-bottom-lg padding-bottom-xs margin-block-xxs color-text"
+          >
+            This little box is surrounded by a single class that transforms a
+            subset of to match xbox branding.
+          </h2>
+          <div class="margin-top-xs">
+            <button class="button button-primary">Primary</button>
+            <button class="button button-filled button-primary">
+              Primary filled
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

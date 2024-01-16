@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated backgroung gradient and text</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@microsoft/atlas-css/dist/index.css"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Literata:opsz,wght@7..72,600&family=Rubik+Doodle+Triangles&family=Texturina:opsz@12..72&display=swap");
+    :root {
+      --texturina: "Texturina", serif;
+      --literata: "Literata", serif;
+      --cinzel: "Cinzel", serif;
+    }
+    body {
+      font-family: var(--literata);
+      font-size: 150px;
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+    }
+
+    #gradient {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(
+        45deg,
+        black,
+        var(--theme-primary-dark),
+        var(--theme-body-background-accent),
+        var(--theme-body-background)
+      );
+      background-size: 800% 800%;
+      -webkit-animation: colors 10s ease infinite;
+      -moz-animation: colors 10s ease infinite;
+      animation: colors 10s ease infinite;
+    }
+
+    #gradient-inverted-text {
+      text-align: center;
+      text-wrap: wrap;
+      white-space: wrap;
+      font-weight: bold;
+      text-transform: lowercase;
+      mix-blend-mode: difference;
+    }
+
+    h1,
+    p {
+      color: white;
+    }
+
+    @keyframes colors {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+  <body>
+    <div id="gradient">
+      <div id="gradient-inverted-text">
+        <h1>go with the flow</h1>
+      </div>
+    </div>
+  </body>
+</html>
